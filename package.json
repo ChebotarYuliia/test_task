@@ -57,6 +57,7 @@
     "npmlog": "4.0.0",
     "os": "^0.1.1",
     "path": "0.12.7",
+    "perfect-scrollbar": "^1.4.0",
     "phantomjs-prebuilt": "2.1.11",
     "postcss-loader": "0.9.1",
     "pug": "2.0.0-beta5",

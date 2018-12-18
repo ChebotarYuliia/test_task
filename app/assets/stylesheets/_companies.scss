@@ -25,6 +25,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include bp (md){
+    width: 150px;
+    height: 150px;
+  }
   span {
     font-size: 44px;
     color: $blue;
@@ -41,24 +45,66 @@
 //  list of companies box
 
 .listOfCompanies {
+  position: relative;
+  overflow: auto;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   height: 350px;
-  overflow: scroll;
+  width: 100% !important;
   li {
+    width: 100%;
     padding: 5px;
     color: $text;
-    font-size: 14px;
+    font-size: 165x;
     border: 1px solid #ccc;
     a{
       display: block;
       color: #fff;
       &:hover{
-        background: $blue;
-        color: #fff;
+        color: $blue;
+        cursor: pointer;
         text-decoration: none;
       }
+    }
+  }
+}
+
+.ps__thumb-y{
+  background-color: $blue;
+}
+.nav>li>a:hover{
+  background-color: transparent;
+  color: $blue;
+}
+.nav>li>a:focus{
+  background-color: $blue;
+}
+
+
+.partnersWrp{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.partnerItem{
+  border: 1px solid #fff;
+  padding: 10px;
+  margin: 10px 1px;
+  height: 100px;
+  width: 30%;
+  @include bp (xs){
+    width: 50%;
+  }
+  p{
+    font-size: 14px;
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+    &:first-child{
+      font-weight: 700;
+      font-style: initial;
     }
   }
 }
