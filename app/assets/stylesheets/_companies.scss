@@ -1,0 +1,64 @@
+.companiesContainer__item {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin: 25px 0;
+}
+
+.companiesContainer__item-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color:  #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid $blue;
+  margin-bottom: 10px;
+}
+
+// totalcompanies box
+
+.totalCompanies {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid  $blue;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-size: 44px;
+    color: $blue;
+    font-weight: 700;
+    @include bp(md) {
+      font-size: 35px;
+    }
+    @include bp(xs) {
+      font-size: 25px;
+    }
+  }
+}
+
+//  list of companies box
+
+.listOfCompanies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 350px;
+  overflow: scroll;
+  li {
+    padding: 5px;
+    color: $text;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    a{
+      display: block;
+      color: #fff;
+      &:hover{
+        background: $blue;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

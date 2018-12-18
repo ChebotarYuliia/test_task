@@ -1,0 +1,9 @@
+@import "../../../_mixin";
+
+.waves-effect {
+      position: relative; 
+      cursor: pointer; 
+      overflow: hidden; 
+      @include user-select(none);
+      -webkit-tap-highlight-color: transparent; 
+}

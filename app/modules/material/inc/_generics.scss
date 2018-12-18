@@ -1,0 +1,120 @@
+@import "../_mixin", "_variables";
+
+/*
+ * Font Weight
+ */
+.f-300 {
+  font-weight: 300 !important;
+}
+
+.f-400 {
+  font-weight: 400 !important;
+}
+
+.f-500 {
+  font-weight: 500 !important;
+}
+
+.f-700 {
+  font-weight: 700 !important;
+}
+
+/*
+ * Position Classes
+ */
+.p-relative {
+  position: relative !important;
+}
+
+.p-absolute {
+  position: absolute !important;
+}
+
+.p-fixed {
+  position: fixed !important;
+}
+
+.p-static {
+  position: static !important;
+}
+
+/*
+ * Overflow
+ */
+.o-hidden {
+  overflow: hidden !important;
+}
+
+.o-visible {
+  overflow: visible !important;
+}
+
+.o-auto {
+  overflow: auto !important;
+}
+
+/*
+ * Display
+ */
+.d-block {
+  display: block !important;
+}
+
+.di-block {
+  display: inline-block !important;
+}
+
+/* 
+ * Material Background Colors
+ */
+$array-b: ("bgm-white": $m-white, "bgm-black": $m-black, "bgm-brown": $m-brown, "bgm-pink": $m-pink, "bgm-red": $m-red, "bgm-blue": $m-blue, "bgm-purple": $m-purple, "bgm-deeppurple": $m-deeppurple, "bgm-lightblue": $m-lightblue, "bgm-cyan": $m-cyan, "bgm-teal": $m-teal, "bgm-green": $m-green, "bgm-lightgreen": $m-lightgreen, "bgm-lime": $m-lime, "bgm-yellow": $m-yellow, "bgm-amber": $m-amber, "bgm-orange": $m-orange, "bgm-deeporange": $m-deeporange, "bgm-gray": $m-gray, "bgm-bluegray": $m-bluegray, "bgm-indigo": $m-indigo);
+
+@each $name, $color in $array-b {
+  .#{$name} {
+    background-color: #{$color} !important;
+  }
+}
+
+$array-c: ("c-white": $m-white, "c-black": $m-black, "c-brown": $m-brown, "c-pink": $m-pink, "c-red": $m-red, "c-blue": $m-blue, "c-purple": $m-purple, "c-deeppurple": $m-deeppurple, "c-lightblue": $m-lightblue, "c-cyan": $m-cyan, "c-teal": $m-teal, "c-green": $m-green, "c-lightgreen": $m-lightgreen, "c-lime": $m-lime, "c-yellow": $m-yellow, "c-amber": $m-amber, "c-orange": $m-orange, "c-deeporange": $m-deeporange, "c-gray": $m-gray, "c-bluegray": $m-bluegray, "c-indigo": $m-indigo);
+
+@each $name, $color in $array-c {
+  .#{$name} {
+    color: #{$color} !important;
+  }
+}
+
+/*
+ * Background Colors
+ */
+.bg-black-trp {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/*
+ * Border
+ */
+.b-0 {
+  border: 0 !important;
+}
+
+/*
+ * width
+ */
+.w-100 {
+  width: 100% !important;
+}
+
+/*
+ * Border Radius 
+ */
+
+.brd-2 {
+  @include border-radius(2px);
+}
+
+/*
+ * Text Transform
+ */
+.t-uppercase {
+  text-transform: uppercase;
+}

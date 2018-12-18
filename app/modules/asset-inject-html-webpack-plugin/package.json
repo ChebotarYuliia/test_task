@@ -1,0 +1,100 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "asset-inject-html-webpack-plugin",
+        "scope": null,
+        "escapedName": "asset-inject-html-webpack-plugin",
+        "name": "asset-inject-html-webpack-plugin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "D:\\Layouts\\steelwest"
+    ]
+  ],
+  "_from": "asset-inject-html-webpack-plugin@latest",
+  "_id": "asset-inject-html-webpack-plugin@0.6.1",
+  "_inCache": true,
+  "_location": "/asset-inject-html-webpack-plugin",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/asset-inject-html-webpack-plugin-0.6.1.tgz_1492767276316_0.08803784404881299"
+  },
+  "_npmUser": {
+    "name": "luobotang",
+    "email": "tangkangxing@sina.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "asset-inject-html-webpack-plugin",
+    "scope": null,
+    "escapedName": "asset-inject-html-webpack-plugin",
+    "name": "asset-inject-html-webpack-plugin",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/asset-inject-html-webpack-plugin/-/asset-inject-html-webpack-plugin-0.6.1.tgz",
+  "_shasum": "4be16f77a2056509ac8b39f96829f12c218f9e86",
+  "_shrinkwrap": null,
+  "_spec": "asset-inject-html-webpack-plugin",
+  "_where": "D:\\Layouts\\steelwest",
+  "author": {
+    "name": "luobotang"
+  },
+  "bugs": {
+    "url": "https://github.com/luobotang/asset-inject-html-webpack-plugin/issues"
+  },
+  "dependencies": {},
+  "description": "Inject assets into HTML template, extension plugin of html-webpack-plugin.",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.0",
+    "express": "^4.15.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "ftl-server": "^1.0.1",
+    "html-webpack-harddisk-plugin": "^0.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-middleware": "^1.10.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4be16f77a2056509ac8b39f96829f12c218f9e86",
+    "tarball": "https://registry.npmjs.org/asset-inject-html-webpack-plugin/-/asset-inject-html-webpack-plugin-0.6.1.tgz"
+  },
+  "gitHead": "d320be4fce89cab70d14bf8384b90d770c10305c",
+  "homepage": "https://github.com/luobotang/asset-inject-html-webpack-plugin#readme",
+  "keywords": [
+    "plugin",
+    "webpack",
+    "html-webpack-plugin"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "luobotang",
+      "email": "tangkangxing@sina.com"
+    }
+  ],
+  "name": "asset-inject-html-webpack-plugin",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luobotang/asset-inject-html-webpack-plugin.git"
+  },
+  "scripts": {
+    "start": "node test/server.js -c test/ftl.config.js",
+    "test": "webpack --config test/webpack.config.js"
+  },
+  "version": "0.6.1"
+}

@@ -1,0 +1,37 @@
+@import "../../../_mixin";
+
+.sweet-alert {
+    @include border-radius(2px);
+    padding: 10px 30px;
+    
+    h2 {
+        font-size: 16px;
+        font-weight: 400;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .lead {
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 6px 12px; 
+        font-size: 13px;
+        margin: 20px 2px 0;
+    }
+    .add-cat-group {
+        .fg-line {
+           .bootstrap-select {
+               button {
+                   .filter-option {
+                       overflow: hidden;
+                       text-overflow: ellipsis;
+                       white-space: nowrap;
+                       width: 300px;
+                   }
+               }
+           }
+        }
+    }
+}

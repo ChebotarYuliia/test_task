@@ -1,0 +1,67 @@
+.fancyselect {
+  background: #f9f9f9;
+  background: -moz-linear-gradient(top, #fff, #f1f1f1)   ;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f1f1));
+  border: 1px solid #c7c7c7;
+  display: inline-block;
+  -moz-border-radius: 3px;
+  -webkit-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+.fancyselect select, .selecttext {
+  background: none;
+  padding: 5px;
+  border: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #555;
+  height: 26px;
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+}
+.selecttext {
+  position: absolute;
+  display: block;
+  padding: 0 9px;
+  line-height: 26px;
+}
+.fancyselect .arrows {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNp8T9sJwEAIa6RTuT+ulV4EWznq5SshDxEkr0JESMDdU9tmCFw8CdRsRgdsMHLhVmIwv5t/UJOn5jSLmt0Dqa0eboE3+AgwAHN7GgmNZ9fsAAAAAElFTkSuQmCC) 0 0 no-repeat;
+  display: block;
+  width: 7px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.fancyselect.focus {
+  border: 1px solid #96b7ff;
+  -moz-box-shadow: 0 0 4px rgba(150,183,255,0.7), 0 1px 1px rgba(0,0,0,0.05);
+  -webkit-box-shadow: 0 0 4px rgba(150,183,255,0.7), 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 0 4px rgba(150,183,255,0.7), 0 1px 1px rgba(0,0,0,0.05);
+}
+.fancyselect.disabled .selecttext,
+.fancyselect.disabled select {
+  color: #bbb;
+  cursor: default;
+}
+
+/*iOS*/
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .fancyselect .arrows {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAYAAAC9BQwsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFxJREFUeNrc00sKACAIBNC8lvfXaxkERdEHc1o1W3kbHcnMUiS0g6paB8TMPtihtMMTXKAlHuABTbhBBxpwgReoYRIRe3qOnyC0nNA5oAJAlYNKDr0V9MieZAEGADRBax9ga1hcAAAAAElFTkSuQmCC) 0 0 no-repeat;
+    background-size: 100%;
+  }
+}
+.fancyselect.ios select {
+  padding-right: 25px;
+  -webkit-text-size-adjust: none;
+}

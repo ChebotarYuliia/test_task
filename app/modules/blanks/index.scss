@@ -1,0 +1,127 @@
+// Reduce:
+$t: 'top';
+$r: 'right';
+$b: 'bottm';
+$l: 'left';
+
+// margin, padding
+@for $i from 1 through 10 {
+  .m#{$i*5} { margin: 5px * $i; }
+  .am#{$i*5} { margin: 1px * $i; }
+  @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+    .m#{$reduce}#{$i*5}{ margin-#{$side}: 5px * $i; }
+    .am#{$reduce}#{$i*5}{ margin-#{$side}: 1px * $i; }
+  }
+
+  .p#{$i*5} { padding: 5px * $i; }
+  .ap#{$i*5} { padding: 1px * $i; }
+  @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+    .p#{$reduce}#{$i*5}{ padding-#{$side}: 5px * $i; }
+    .ap#{$reduce}#{$i*5}{ padding-#{$side}: 1px * $i; }
+  }
+
+  @media screen and (min-width: 480px){
+    .am#{$i*5} { margin: 2px * $i; }
+    .ap#{$i*5} { padding: 2px * $i; }
+    @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+      .am#{$reduce}#{$i*5}{ margin-#{$side}: 2px * $i; }
+      .ap#{$reduce}#{$i*5}{ padding-#{$side}: 2px * $i; }
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .am#{$i*5} { margin: 3px * $i; }
+    .ap#{$i*5} { padding: 3px * $i; }
+    @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+      .am#{$reduce}#{$i*5}{ margin-#{$side}: 3px * $i; }
+      .ap#{$reduce}#{$i*5}{ padding-#{$side}: 3px * $i; }
+    }
+  }
+
+  @media screen and (min-width: 992px){
+    .am#{$i*5} { margin: 4px * $i; }
+    .ap#{$i*5} { padding: 4px * $i; }
+    @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+      .am#{$reduce}#{$i*5}{ margin-#{$side}: 4px * $i; }
+      .ap#{$reduce}#{$i*5}{ padding-#{$side}: 4px * $i; }
+    }
+  }
+
+  @media screen and (min-width: 1200px){
+    .am#{$i*5} { margin: 5px * $i; }
+    .ap#{$i*5} { padding: 5px * $i; }
+    @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+      .am#{$reduce}#{$i*5}{ margin-#{$side}: 5px * $i; }
+      .ap#{$reduce}#{$i*5}{ padding-#{$side}: 5px * $i; }
+    }
+  }
+}
+
+// top, right, bottom, left
+@for $i from 1 through 10 {
+  @each $reduce, $side in (t, top), (r, right), (b, bottom), (l, left) {
+    .#{$reduce}#{$i*5}{ #{$side}: 5px * $i; }
+  }
+}
+
+// width
+.w25{
+  width: 25%;
+}
+.w33{
+  width: 33.3333%;
+}
+.w50{
+  width: 50%;
+}
+.w100{
+  width: 100%;
+}
+
+// float
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.fu{
+  float: unset;
+}
+
+// colors
+.cw{
+  color: #fff;
+}
+.cb{
+  color: #000;
+}
+.cg{
+  color: #555;
+}
+.ct{
+  color: transparent;
+}
+
+.bcw{
+  background-color: #fff;
+}
+.bcb{
+  background-color: #000;
+}
+.bcg{
+  background-color: #555;
+}
+.bct{
+  background-color: transparent;
+}
+
+.tal{
+  text-align: left;
+}
+.tar{
+  text-align: right;
+}
+.tac{
+  text-align: center;
+}

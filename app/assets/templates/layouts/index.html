@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center justify-content-sm-center">
+          <div class="col-md-5 col-sm-10 col-xs-12">
+              <form class="registrationForm form clear-styles"
+                    data-error-title="Ошибка отправки!"
+                    data-error-message="Попробуйте заполнить форму через некоторое время."
+                    data-success-title="Спасибо за регистрацию!"
+                    data-success-redirect="./companies.html"
+                    action="http://codeit.pro/codeitCandidates/serverFrontendTest/user/registration">
+                <p>Заполните форму для регистрации</p>
+                <input type="text" name="name" placeholder="Имя" data-title="Name"  data-validate-required="Обязательное поле">
+                <input type="text" name="surname" placeholder="Фамилия" data-title="Surname"  data-validate-required="Обязательное поле">
+                <input type="email" name="email" placeholder="Email" data-title="Email" data-validate-required="Обязательное поле" data-validate-email="Неправильный email">
+                <input type="tel" name="phone" placeholder="Телефон" data-title="Telephone" data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер">
+                <select class="chosen-select" title="gender select" name="gender select" data-validate-required="Обязательное поле">
+                  <option value="man">Мужской</option>
+                  <option value="woman">Женский</option>
+                </select>
+                <input type="password" name="password" title="password" placeholder="Введите свой пароль"  data-validate-required="Обязательное поле">
+                <input type="checkbox" value="accepted" title="agreement" class="customCheckbox" name="agreement" id="agreement"  data-validate-required="Обязательное поле">
+                <label for="agreement" class="customCheckboxLabel">с условиями ознакомлен</label>
+                <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

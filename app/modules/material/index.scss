@@ -1,0 +1,92 @@
+@import "_mixin";
+
+/*
+ * Load Main Bootstrap LESS files
+ */
+
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables';
+
+/*
+ * Variable and Mixin
+ */ 
+
+@import 'inc/_variables';
+@import 'inc/_mixin';
+
+/* 
+ * Load Font
+ */
+//@import 'inc/_font';
+
+/*
+ * Vendors
+ */
+//@import '../../js/weather-icons/weather-icons';
+//@import '../../js/fileinput/fileinput';
+@import '../../../node_modules/material-shadows/material-shadows';
+//@import '../../js/vendor/Waves/src/scss/waves';
+
+/* 
+ * Load Website related LESS files 
+ */  
+@import 'inc/_generics';
+@import 'inc/_bootstrap-overrides';
+@import 'inc/_base';
+@import 'inc/_header';
+@import 'inc/_sidebar';
+@import 'inc/_dropdown';
+@import 'inc/_listview';
+@import 'inc/_progress-bar';
+@import 'inc/_chat';
+@import 'inc/_tabs';
+@import 'inc/_card';
+@import 'inc/_chart';
+@import 'inc/_widgets';
+@import 'inc/_table';
+@import 'inc/_todo';
+@import 'inc/_button';
+@import 'inc/_form';
+@import 'inc/_pagination';
+@import 'inc/_popover';
+@import 'inc/_wizard';
+@import 'inc/_alert';
+@import 'inc/_media';
+@import 'inc/_modal';
+@import 'inc/_panel';
+@import 'inc/_tooltip';
+@import 'inc/_breadcrumb';
+@import 'inc/_messages';
+@import 'inc/_404';
+@import 'inc/_login';
+@import 'inc/_profile';
+@import 'inc/_photos';
+@import 'inc/_contacts';
+@import 'inc/_shadow';
+@import 'inc/_misc';
+@import 'inc/_ie-warning';
+@import 'inc/_footer';
+@import 'inc/_pricing-table';
+@import 'inc/_invoice';
+@import 'inc/_wall';
+
+
+@import 'inc/_print';
+
+/*
+ * Vendor Overrides
+ */
+//@import 'inc/vendor-overrides/_mediaelement';
+//@import 'inc/vendor-overrides/_fullcalendar';
+//@import 'inc/vendor-overrides/_bootgrid';
+//@import 'inc/vendor-overrides/_bootstrap-select';
+//@import 'inc/vendor-overrides/_bootstrap-chosen';
+//@import 'inc/vendor-overrides/_noUiSlider';
+//@import 'inc/vendor-overrides/_farbtastic';
+//@import 'inc/vendor-overrides/_summernote';
+//@import 'inc/vendor-overrides/_bootstrap-datetimepicker';
+//@import 'inc/vendor-overrides/_fileinput';
+//@import 'inc/vendor-overrides/_light-gallery';
+//@import 'inc/vendor-overrides/_waves';
+//@import 'inc/vendor-overrides/_sweetalert';
+//@import 'inc/vendor-overrides/_typeahead';
+

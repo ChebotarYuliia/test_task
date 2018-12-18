@@ -1,0 +1,145 @@
+@import "./mixin.scss";
+
+// main styles
+body {
+  font-family: $default-font;
+  background: $dark;
+}
+
+.registrationForm {
+  background-repeat: no-repeat;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 50px;
+  @include bp(xs) {
+    padding: 10px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    @include bp(xs) {
+      font-size: 16px;
+    }
+  }
+  input {
+    margin: 15px 0;
+    font-size: 16px;
+    padding: 10px;
+    max-width: 250px;
+    width: 100%;
+    border: 1px solid $blue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, 0.2);
+    color: #fff;
+    outline: none;
+  }
+  button {
+    border: 1px solid $blue;
+    background: rgba(20, 20, 20, 0.6);
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    max-width: 250px;
+    width: 100%;
+    transition: 0.4s;
+    &:hover {
+      background: rgba(20, 20, 20, 0.8);
+    }
+  }
+}
+
+.chosen-container {
+  max-width: 250px !important;
+  width: 100% !important;
+}
+
+.chosen-container-single .chosen-single {
+  background: transparent;
+  background-image: transparent !important;
+  border: 0;
+  height: initial;
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  max-width: 250px;
+  width: 100%;
+  border: 1px solid $blue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.chosen-container .chosen-drop {
+  background: transparent;
+  border: 0;
+  height: initial;
+  font-size: 16px;
+  padding: 10px;
+  max-width: 250px;
+  width: 100%;
+  border: 1px solid $blue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: $blue;
+  color: #fff;
+  outline: none;
+}
+.chosen-container-active.chosen-with-drop .chosen-single {
+  background: transparent !important;
+  background-image: transparent !important;
+  border: none !important;
+}
+
+.chosen-container-single .chosen-single span {
+  background: transparent !important;
+  background-image: transparent !important;
+  border: none !important;
+  color: #fff;
+}
+
+.chosen-search {
+  display: none;
+}
+
+.customCheckbox {
+  display: none;
+}
+
+.customCheckboxLabel {
+  color: $blue;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid $blue;
+    background: transparent;
+    margin-right: 10px;
+  }
+}
+
+.customCheckbox:checked + .customCheckboxLabel:before {
+  background: $blue;
+}

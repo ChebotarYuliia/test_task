@@ -1,0 +1,12 @@
+@import "../_mixin";
+
+.progress {
+    @include box-shadow(none);
+    @include border-radius(0);
+    height: 5px;
+    margin-bottom: 0;
+    
+    .progress-bar {
+        @include box-shadow(none);
+    }
+}
