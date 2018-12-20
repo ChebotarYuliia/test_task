@@ -1,0 +1,127 @@
+.newsSlider {
+  background: #000;
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 45%;
+    height: 45px;
+    width: 30px;
+    font-size: 0;
+    border: 0;
+    background: url("../images/prev.png") center no-repeat;
+    z-index: 1;
+    outline: none;
+    @include bp(sm) {
+      top: 150px;
+    }
+    @include bp(xs) {
+      top: 100px;
+    }
+  }
+  .slick-next {
+    background: url("../images/next.png") center no-repeat;
+    right: 0;
+  }
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    z-index: 100;
+    bottom: 0px;
+    width: 100%;
+    li {
+      button {
+        font-size: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid $blue;
+        border-radius: 10px;
+        background-color: transparent;
+        margin: 0 3px;
+        padding: 0;
+        outline: none;
+      }
+    }
+    .slick-active {
+      button {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
+.newsSliderItem {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  padding: 0 15px;
+  border-bottom: 1px solid $text;
+  @include bp(sm) {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  @include bp(xs) {
+    padding-bottom: 15px;
+  }
+  div {
+    padding: 10px;
+  }
+  img {
+    width: 400px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    @include bp(md) {
+      width: 300px;
+      height: 190px;
+    }
+    @include bp(sm) {
+      width: 350px;
+      height: 200px;
+    }
+    @include bp(xs) {
+      width: 250px;
+      height: 200px;
+    }
+  }
+}
+
+.newsSliderItemAuthor {
+  font-size: 14px;
+  color: $text;
+  text-align: center;
+}
+
+.newsSliderItemDate {
+  text-align: right;
+  color: #c4c3c3;
+  font-size: 12px;
+}
+
+.newsSliderItemTitle {
+  color: $blue;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.newsSliderItemDescr {
+  font-size: 14px;
+  line-height: 24px;
+  color: $text;
+  width: 400px;
+  @include bp(md) {
+    width: 300px;
+    height: 190px;
+  }
+  @include bp(sm) {
+    width: initial;
+    height: initial;
+  }
+}

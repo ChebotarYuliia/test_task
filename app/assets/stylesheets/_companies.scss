@@ -1,14 +1,14 @@
-.companiesContainer__item {
+.companiesContainerItem {
   padding: 15px;
   border: 1px solid #ccc;
   margin: 25px 0;
 }
 
-.companiesContainer__item-title {
+.companiesContainerItemTitle {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  color:  #fff;
+  color: #fff;
   padding: 5px 0;
   border-bottom: 1px solid $blue;
   margin-bottom: 10px;
@@ -19,13 +19,13 @@
 .totalCompanies {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  border: 1px solid  $blue;
+  border-radius: 110px;
+  border: 1px solid $blue;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include bp (md){
+  @include bp(md) {
     width: 150px;
     height: 150px;
   }
@@ -58,10 +58,10 @@
     color: $text;
     font-size: 165x;
     border: 1px solid #ccc;
-    a{
+    a {
       display: block;
       color: #fff;
-      &:hover{
+      &:hover {
         color: $blue;
         cursor: pointer;
         text-decoration: none;
@@ -70,39 +70,38 @@
   }
 }
 
-.ps__thumb-y{
+.ps__thumb-y {
   background-color: $blue;
 }
-.nav>li>a:hover{
+.nav > li > a:hover {
   background-color: transparent;
   color: $blue;
 }
-.nav>li>a:focus{
+.nav > li > a:focus {
   background-color: $blue;
 }
 
-
-.partnersWrp{
+.partnersWrp {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.partnerItem{
+.partnerItem {
   border: 1px solid #fff;
   padding: 10px;
   margin: 10px 1px;
   height: 100px;
   width: 30%;
-  @include bp (xs){
+  @include bp(xs) {
     width: 50%;
   }
-  p{
+  p {
     font-size: 14px;
     color: #fff;
     font-style: italic;
     text-align: center;
-    &:first-child{
+    &:first-child {
       font-weight: 700;
       font-style: initial;
     }

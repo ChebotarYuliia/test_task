@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Companies</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -14,27 +15,31 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4 col-xs-12">
-          <div class="companiesContainer__item">
-            <p class="companiesContainer__item-title">Всего компаний</p>
+          <div class="companiesContainerItem">
+            <p class="companiesContainerItemTitle">Всего компаний</p>
             <div class="totalCompanies"><span></span></div>
           </div>
         </div>
         <div class="col-sm-8 col-xs-12">
-          <div class="companiesContainer__item">
-            <p class="companiesContainer__item-title">Список компаний</p>
+          <div class="companiesContainerItem">
+            <p class="companiesContainerItemTitle">Список компаний</p>
             <ul class="listOfCompanies nav nav-tabs"></ul>
           </div>
         </div>
       </div>
       <div class="col-sm-12 col-xs-12">
-        <div class="companiesContainer__item">
-          <p class="companiesContainer__item-title">Список партнеров</p>
+        <div class="companiesContainerItem">
+          <p class="companiesContainerItemTitle">Выберите компанию из списка, что бы посмотреть ее партнеров</p>
           <div class="partnersContent tab-content"></div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-xs-12"></div>
-        <div class="col-sm-6 col-xs-12"></div>
+        <div class="col-sm-12 col-xs-12">
+          <div class="companiesContainerItem">
+            <p class="companiesContainerItemTitle">Новости</p>
+            <div class="newsSlider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "dots": true, "rows": 2, "responsive": [{"breakpoint": 991, "settings": {"slidesToShow": 1, "rows": 1}}]}'></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -53,6 +53,7 @@
     "manifest-revision-webpack-plugin": "0.3.0",
     "material-shadows": "^3.0.1",
     "mocha": "3.0.2",
+    "moment": "^2.23.0",
     "node-sass": "^3.13.1",
     "npmlog": "4.0.0",
     "os": "^0.1.1",

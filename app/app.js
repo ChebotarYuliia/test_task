@@ -14,7 +14,7 @@ const Forms = require('_modules/forms');
 const Slider = require('_modules/slider');
 const Jscrollpane = require('_modules/jscrollpane');
 const Chosen = require('_modules/chosen');
-// require('perfect-scrollbar');
+const moment = require('moment');
 import PerfectScrollbar from 'perfect-scrollbar';
 
 // Stylesheet entrypoint
@@ -29,10 +29,9 @@ $(function() {
   new PerfectScrollbar('.listOfCompanies');
 
   $(function() {
+    // RENDERING CONPANIES SECTIONS
     const companiesListUrl =
       'http://codeit.pro/codeitCandidates/serverFrontendTest/company/getList';
-    const newsListUrl =
-      'http://codeit.pro/codeitCandidates/serverFrontendTest/news/getList';
     let compList;
     let preloader = $('#loader');
 
@@ -41,7 +40,8 @@ $(function() {
         .then(response => {
           if (response.status !== 200) {
             alert(
-              'Looks like there was a problem. Status Code: ' + response.status
+              'Looks like with getting companies was a problem. Status Code: ' +
+                response.status
             );
             return;
           }
@@ -91,7 +91,6 @@ $(function() {
         <p>Процентная доля компании: ${partners[i].value} %</p>
         </div>`);
       }
-      console.log(partnersArr);
       return partnersArr;
     };
 
@@ -108,6 +107,82 @@ $(function() {
             )
         );
       }
+    };
+
+    // RENDERING NEWS SECTION
+    const newsListUrl =
+      'http://codeit.pro/codeitCandidates/serverFrontendTest/news/getList';
+    let newsList;
+
+    const getNews = () => {
+      fetch(newsListUrl)
+        .then(response => {
+          if (response.status !== 200) {
+            alert(
+              'Looks like with getting news was a problem. Status Code: ' +
+                response.status
+            );
+            return;
+          }
+
+          response.json().then(data => {
+            newsList = data.list;
+            renderNews(newsList);
+            return;
+          });
+        })
+        .catch(error => {
+          alert(
+            'There has been a problem with your fetch operation: ' +
+              error.message
+          );
+        });
+    };
+    getNews();
+
+    const getPostDate = unixDate => {
+      let date = moment.unix(unixDate).format('DD.MM.YYYY');
+      return date;
+    };
+
+    const filterPostDescription = description => {
+      let minDescription = description.slice(0, 150);
+      return (minDescription += '...');
+    };
+
+    const renderNews = news => {
+      for (let i = 0; i < news.length; i++) {
+        $('.newsSlider').append(
+          `<div>
+              <div
+                class="newsSliderItem">
+                <div>
+                  <img 
+                    src="${news[i].img} 
+                    alt="${news[i].description}"
+                  />
+                  <p class="newsSliderItemAuthor">
+                    Автор: ${news[i].author}
+                  </p>
+                </div>
+                <div>
+                  <p class="newsSliderItemDate">
+                    ${getPostDate(news[i].date)}
+                  </p>
+                  <a href="${news[i].link}"
+                     target="_blank"
+                     class="newsSliderItemTitle">
+                    ${news[i].link}
+                  </a>
+                  <p class="newsSliderItemDescr">
+                    ${filterPostDescription(news[i].description)}
+                  </p>
+                </div>
+              </div>
+            </div>`
+        );
+      }
+      $('.newsSlider').slick();
     };
   });
 });
