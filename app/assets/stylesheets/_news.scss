@@ -111,6 +111,10 @@
   text-decoration: none;
   margin: 10px 0;
   cursor: pointer;
+  outline: none;
+  &:visited, &:focus{
+    outline: none;
+  }
 }
 
 .newsSliderItemDescr {

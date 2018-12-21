@@ -3,5 +3,4 @@ node_modules/
 tmp/
 manifest.json
 *.log
-dist/
 testing/

@@ -152,6 +152,7 @@ $(function () {
 
     const renderNews = news => {
       for (let i = 0; i < news.length; i++) {
+        console.log(news[i].link);
         $('.newsSlider').append(
           `<div>
               <div
@@ -169,7 +170,7 @@ $(function () {
                   <p class="newsSliderItemDate">
                     ${getPostDate(news[i].date)}
                   </p>
-                  <a href="${news[i].link}"
+                  <a href="https://${news[i].link}/"
                      target="_blank"
                      class="newsSliderItemTitle">
                     ${news[i].link}

@@ -1,6 +1,6 @@
 'use strict';
 
-var domain = 'motor-reduktor-3mp.com.ua'; // домен сайта
+var domain = ''; // домен сайта
 var ab = ''; // a, b или ничего
 var ab_dir = '/2/'; // директория для AB-теста
 
@@ -19,7 +19,7 @@ var AssetInjectHtmlWebpackPlugin = require('../../app/modules/asset-inject-html-
  * @param  {[type]} _path [description]
  * @return {[type]}       [description]
  */
-module.exports = function(_path, ENV) {
+module.exports = function (_path, ENV) {
   // define local variables
   var dependencies = Object.keys(require(_path + '/package').dependencies);
   var rootAssetPath = _path + 'app';
@@ -102,9 +102,9 @@ module.exports = function(_path, ENV) {
           ab:
             ENV == 'production' && ab == 'a'
               ? "<?php if((!isset($_COOKIE['AB']) && rand(0, 1)) || (isset($_COOKIE['AB']) && $_COOKIE['AB'] == 2)) { SetCookie('AB','2',time()+3600*24*365); $ref = $_SERVER['QUERY_STRING']; if ($ref != '') $ref = '?' . $ref; header('HTTP/1.1 301 Moved Permanently'); header('Location:http://" +
-                domain +
-                ab_dir +
-                "' . $ref); exit();  }else{ SetCookie('AB','1',time()+3600*24*365); } ?>"
+              domain +
+              ab_dir +
+              "' . $ref); exit();  }else{ SetCookie('AB','1',time()+3600*24*365); } ?>"
               : ' ',
           utm:
             ENV == 'production'
@@ -150,8 +150,8 @@ module.exports = function(_path, ENV) {
       test: /\.(css|ico|png)$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]'
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]'
       ]
     };
 
@@ -159,8 +159,8 @@ module.exports = function(_path, ENV) {
       test: /\.woff(2)?(\?[a-z0-9=&.]+)?$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]'
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]'
       ]
     };
 
@@ -168,8 +168,8 @@ module.exports = function(_path, ENV) {
       test: /\.(ttf|eot)(\?[a-z0-9=&.]+)?$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]'
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]'
       ]
     };
 
@@ -177,8 +177,8 @@ module.exports = function(_path, ENV) {
       test: /\.svg(\?[a-z0-9=&.]+)?$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]',
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]',
         'image-webpack-loader?{optimizationLevel: 8, interlaced: false, pngquant:{quality: "80-90", speed: 4}, mozjpeg: {quality: 80}}'
       ]
     };
@@ -187,8 +187,8 @@ module.exports = function(_path, ENV) {
       test: /\.(gif|jpe?g)$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]',
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]',
         'image-webpack-loader?{optimizationLevel: 8, interlaced: false, pngquant:{quality: "80-90", speed: 4}, mozjpeg: {quality: 80}}'
       ]
     };
@@ -219,8 +219,8 @@ module.exports = function(_path, ENV) {
       test: /\.(css|ico|png|jpg|jpeg|gif)$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]'
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]'
       ]
     };
 
@@ -228,8 +228,8 @@ module.exports = function(_path, ENV) {
       test: /\.woff(2)?(\?[a-z0-9=&.]+)?$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]'
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]'
       ]
     };
 
@@ -237,8 +237,8 @@ module.exports = function(_path, ENV) {
       test: /\.(ttf|eot|svg)(\?[a-z0-9=&.]+)?$/i,
       loaders: [
         'url-loader?limit=4096&context=' +
-          rootAssetPath +
-          '&name=assets/static/[ext]/[name]_[hash].[ext]'
+        rootAssetPath +
+        '&name=assets/static/[ext]/[name]_[hash].[ext]'
       ]
     };
 
