@@ -21,14 +21,14 @@ import PerfectScrollbar from 'perfect-scrollbar';
 require('_stylesheets/app.scss');
 
 // Are you ready?
-$(function() {
+$(function () {
   new Forms();
   new Jscrollpane();
   new Slider();
   new Chosen();
   new PerfectScrollbar('.listOfCompanies');
 
-  $(function() {
+  $(function () {
     // RENDERING CONPANIES SECTIONS
     const companiesListUrl =
       'http://codeit.pro/codeitCandidates/serverFrontendTest/company/getList';
@@ -41,7 +41,7 @@ $(function() {
           if (response.status !== 200) {
             alert(
               'Looks like with getting companies was a problem. Status Code: ' +
-                response.status
+              response.status
             );
             return;
           }
@@ -56,7 +56,7 @@ $(function() {
         .catch(error => {
           alert(
             'There has been a problem with your fetch operation: ' +
-              error.message
+            error.message
           );
         });
     };
@@ -120,7 +120,7 @@ $(function() {
           if (response.status !== 200) {
             alert(
               'Looks like with getting news was a problem. Status Code: ' +
-                response.status
+              response.status
             );
             return;
           }
@@ -134,7 +134,7 @@ $(function() {
         .catch(error => {
           alert(
             'There has been a problem with your fetch operation: ' +
-              error.message
+            error.message
           );
         });
     };
@@ -146,7 +146,7 @@ $(function() {
     };
 
     const filterPostDescription = description => {
-      let minDescription = description.slice(0, 150);
+      let minDescription = description.slice(0, 110);
       return (minDescription += '...');
     };
 

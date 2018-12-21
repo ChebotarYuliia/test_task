@@ -92,9 +92,12 @@
   padding: 10px;
   margin: 10px 1px;
   height: 100px;
-  width: 30%;
+  width: 210px;
+  @include bp(sm) {
+    width: 250px;
+  }
   @include bp(xs) {
-    width: 50%;
+    width: 290px;
   }
   p {
     font-size: 14px;

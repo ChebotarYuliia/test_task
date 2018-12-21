@@ -1,5 +1,5 @@
 .newsSlider {
-  background: #000;
+  background: #fff;
   .slick-prev,
   .slick-next {
     position: absolute;
@@ -29,8 +29,10 @@
     align-items: center;
     list-style: none;
     z-index: 100;
-    bottom: 0px;
+    bottom: 5px;
     width: 100%;
+    padding: 0;
+    margin: 0;
     li {
       button {
         font-size: 0;
@@ -55,13 +57,13 @@
 .newsSliderItem {
   display: flex;
   align-items: stretch;
-  background: #fff;
-  padding: 0 15px;
+  padding: 0 15px 10px;
   border-bottom: 1px solid $text;
   @include bp(sm) {
     flex-direction: column;
     align-items: center;
     padding: 5px;
+    border: none;
   }
   @include bp(xs) {
     padding-bottom: 15px;
@@ -123,5 +125,8 @@
   @include bp(sm) {
     width: initial;
     height: initial;
+  }
+  @include bp(xs) {
+    height: 100px;
   }
 }
